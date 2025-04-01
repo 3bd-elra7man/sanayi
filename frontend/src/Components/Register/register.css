@@ -1,0 +1,22 @@
+.rg{
+background: rgb(2,0,36);
+background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(17,182,94,1) 100%, rgba(76,108,54,1) 100%);
+background-size: cover;
+min-height: 100vh;
+}
+.headLine{
+  color: #4ade80;
+}
+.navbar{
+  background: rgb(2,0,36);
+  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(17,182,94,1) 100%, rgba(76,108,54,1) 100%);
+}
+.regForm{
+  width: 500px; 
+  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(17,182,94,1) 100%, rgba(76,108,54,1) 100%);
+}
+.ww{
+  width: 48% !important;
+  margin-top: 5px !important;
+  margin-bottom: 20px !important;
+}
