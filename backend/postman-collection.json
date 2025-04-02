@@ -119,7 +119,7 @@
     }
   ],
   "variable": [
-    { "key": "base_url", "value": "http://localhost:5000" },
+    { "key": "base_url", "value": "https://sanayi-production.up.railway.app/" },
     { "key": "token", "value": "" }
   ]
 }

@@ -55,7 +55,7 @@ export default function Register() {
       console.log(validateResult?.error?.details);
       setLoading(false);
     } else {
-        axios.post("http://localhost:5000/api/auth/signup",
+        axios.post(`${process.env.REACT_APP_API_URL}/api/auth/signup`,
           user,
           { withCredentials: true }
         ).then((res) => {

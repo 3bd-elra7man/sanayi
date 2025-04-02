@@ -141,7 +141,7 @@ export default function GovernomentContextProvider(props) {
   async function logIn(e){
     setLoading(true)
     e.preventDefault();
-    axios.post("http://localhost:5000/api/auth/login",
+    axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`,
       user,
       {withCredentials: true}
     )
@@ -164,7 +164,7 @@ export default function GovernomentContextProvider(props) {
     async function checkAuth(e){
       axios.defaults.withCredentials = true
       e.preventDefault();
-      axios.get("http://localhost:5000/api/auth/check-auth",
+      axios.get(`${process.env.REACT_APP_API_URL}/api/auth/check-auth`,
       {},
       { withCredentials: true }
     )
@@ -178,7 +178,7 @@ export default function GovernomentContextProvider(props) {
     async function getProfile(){
      setLoading(true);
      axios.defaults.withCredentials = true;
-     axios.get("http://localhost:5000/api/profile",
+     axios.get(`${process.env.REACT_APP_API_URL}/api/profile`,
       {},
       { withCredentials: true }
     )

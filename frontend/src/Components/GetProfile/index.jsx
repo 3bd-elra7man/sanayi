@@ -54,7 +54,7 @@ export default function GetProfile() {
     setIsEditing(true);
     setLoading(true);
     try {
-      const res = await axios.put("http://localhost:5000/api/profile", user);
+      const res = await axios.put(`${process.env.REACT_APP_API_URL}/api/profile`, user);
       notify(res.data.message);
       setIsEditing(false);
       await getProfile(); // Refresh profile data after update
@@ -251,7 +251,7 @@ export default function GetProfile() {
                       ></textarea>
                     </div>
                     {loading ? (
-                      <div className="spinner-border text-white" role="status">
+                      <div className="text-white spinner-border" role="status">
                         <span className="sr-only">Loading...</span>
                       </div>
                     ): <button 

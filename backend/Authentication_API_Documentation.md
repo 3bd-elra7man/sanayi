@@ -6,7 +6,7 @@ This API allows users to manage authentication-related tasks such as signup, log
 
 ### Base URL
 ```
-http://localhost:5000/api/auth
+https://sanayi-production.up.railway.app/
 ```
 
 ## Endpoints
