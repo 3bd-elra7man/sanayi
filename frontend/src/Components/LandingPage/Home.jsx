@@ -7,10 +7,11 @@ import Footer from "./Components/Footer";
 
 function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white font-sans">
+    <div className="min-h-screen font-sans text-white bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900">
 
-      <main className="container mx-auto px-4 py-8">
-        <WelcomeSection />
+      <WelcomeSection />
+      <main className="container px-4 py-8 mx-auto">
+       
         <FacilitiesSection />
 
         <WorksSection />
