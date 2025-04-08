@@ -1,16 +1,40 @@
-.log{
-    background: rgb(2,0,36);
-    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(17,182,94,1) 100%, rgba(76,108,54,1) 100%);
-    background-size: cover;
-    }
-    .loginForm{
-       width: 500px; 
-       background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(17,182,94,1) 100%, rgba(76,108,54,1) 100%);
-    }
-    .sub-Btn:hover{
-      background: rgba(2, 27, 14, 0.3) !important;
-      color: #fff;
-    }
-    .spinner-border:hover{
-      color: white !important;
-    }
+.log {
+  background: rgb(2,0,36);
+  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(17,182,94,1) 100%, rgba(76,108,54,1) 100%);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.headLine {
+  color: #4ade80;
+}
+
+.loginForm {
+  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(17,182,94,1) 100%, rgba(76,108,54,1) 100%);
+  max-width: 100%; /* Prevent overflow on small screens */
+}
+
+.sub-Btn:hover {
+  background: rgba(2, 27, 14, 0.3) !important;
+  color: #fff;
+}
+
+.spinner-border:hover {
+  color: white !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .loginForm {
+    padding: 1.5rem !important; /* Reduce padding on mobile */
+  }
+  .sub-Btn {
+    width: 100% !important; /* Full width on mobile */
+  }
+}
+
+@media (min-width: 768px) {
+  .loginForm {
+    max-width: 500px; /* Match original width on larger screens */
+  }
+}
