@@ -71,7 +71,7 @@ export default function CreateJobPage() {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       console.log('Form submitted with values:', values)
-      navigate('/servicelisting')
+      navigate('/joblisting')
     },
   })
 
