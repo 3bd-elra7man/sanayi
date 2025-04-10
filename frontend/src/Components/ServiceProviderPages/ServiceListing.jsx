@@ -243,9 +243,9 @@ export default function ServiceListingsPage() {
   const allTags = [...new Set(listings.flatMap(listing => listing.tags))]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white font-sans">
-      <main className="container mx-auto px-4 py-8">
-        <h2 className="text-4xl font-bold mb-8 text-center text-emerald-300">
+    <div className="min-h-screen font-sans text-white bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900">
+      <main className="container px-4 py-8 mx-auto">
+        <h2 className="mb-8 text-4xl font-bold text-center text-emerald-300">
           {category ? category.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase()) : 'All Services'}
         </h2>
 
@@ -255,7 +255,7 @@ export default function ServiceListingsPage() {
               name="jobTitle"
               value={formik.values.jobTitle}
               onChange={formik.handleChange}
-              className="flex-1 px-4 py-2 rounded-full bg-black bg-opacity-50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="flex-1 px-4 py-2 text-white placeholder-gray-400 bg-black bg-opacity-50 rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-500"
             >
               {jobTitles.map((title) => (
                 <option key={title} value={title}>{title}</option>
@@ -265,7 +265,7 @@ export default function ServiceListingsPage() {
               name="location"
               value={formik.values.location}
               onChange={formik.handleChange}
-              className="flex-1 px-4 py-2 rounded-full bg-black bg-opacity-50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="flex-1 px-4 py-2 text-white placeholder-gray-400 bg-black bg-opacity-50 rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-500"
             >
               {locations.map((location) => (
                 <option key={location} value={location}>{location}</option>
@@ -279,7 +279,7 @@ export default function ServiceListingsPage() {
               placeholder="Min Price"
               value={formik.values.minPrice}
               onChange={formik.handleChange}
-              className="flex-1 px-4 py-2 rounded-full bg-black bg-opacity-50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="flex-1 px-4 py-2 text-white placeholder-gray-400 bg-black bg-opacity-50 rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
             <input
               type="number"
@@ -287,10 +287,10 @@ export default function ServiceListingsPage() {
               placeholder="Max Price"
               value={formik.values.maxPrice}
               onChange={formik.handleChange}
-              className="flex-1 px-4 py-2 rounded-full bg-black bg-opacity-50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="flex-1 px-4 py-2 text-white placeholder-gray-400 bg-black bg-opacity-50 rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
           </div>
-          <div className="flex justify-center items-center flex-wrap gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-2">
             {allTags.map(tag => (
               <button
                 key={tag}
@@ -307,21 +307,21 @@ export default function ServiceListingsPage() {
           </div>
           <button
             type="submit"
-            className="w-full bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-full transition duration-300"
+            className="w-full px-4 py-2 text-white transition duration-300 rounded-full bg-emerald-500 hover:bg-emerald-600"
           >
             Apply Filters
           </button>
         </form>
 
         {filteredListings.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {filteredListings.map((listing) => (
-              <div key={listing.id} className="bg-black bg-opacity-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 border border-emerald-800 hover:border-emerald-500">
-                <img src={listing.image} alt={listing.jobTitle} className="w-full h-48 object-cover" />
+              <div key={listing.id} className="overflow-hidden transition duration-300 bg-black bg-opacity-50 border rounded-lg shadow-lg hover:shadow-xl border-emerald-800 hover:border-emerald-500">
+                <img src={listing.image} alt={listing.jobTitle} className="object-cover w-full h-48" />
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-emerald-300">{listing.jobTitle}</h3>
-                  <p className="text-green-100 mb-4 line-clamp-3">{listing.description}</p>
-                  <div className="flex items-center justify-between text-sm text-green-200 mb-4">
+                  <h3 className="mb-2 text-xl font-semibold text-emerald-300">{listing.jobTitle}</h3>
+                  <p className="mb-4 text-green-100 line-clamp-3">{listing.description}</p>
+                  <div className="flex items-center justify-between mb-4 text-sm text-green-200">
                     <span className="flex items-center">
                       <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -338,7 +338,7 @@ export default function ServiceListingsPage() {
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {listing.tags.map((tag, index) => (
-                      <span key={index} className="bg-emerald-800 text-emerald-200 px-2 py-1 rounded-full text-xs">
+                      <span key={index} className="px-2 py-1 text-xs rounded-full bg-emerald-800 text-emerald-200">
                         {tag}
                       </span>
                     ))}
@@ -348,15 +348,9 @@ export default function ServiceListingsPage() {
             ))}
           </div>
         ) : (
-          <p className="text-center text-xl text-green-100 mb-12">No listings found matching your search criteria.</p>
+          <p className="mb-12 text-xl text-center text-green-100">No listings found matching your search criteria.</p>
         )}
       </main>
-
-      <footer className="bg-black bg-opacity-30 text-center py-8 mt-16 backdrop-blur-md">
-        <div className="container mx-auto px-4">
-          <p className="text-green-100 mb-4">&copy; 2024 Sanayi. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   )
 }

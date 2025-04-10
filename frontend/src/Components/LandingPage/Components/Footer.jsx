@@ -2,10 +2,10 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className="py-8 mt-16 text-center bg-opacity-30 backdrop-blur-md navbar">
+    <footer className="py-8 mt-16 text-center bg-opacity-30 backdrop-blur-md d-flex flex-column justify-content-center bg-emerald-800">
         <div className="container px-4 mx-auto">
           <p className="mb-4 text-green-100">
-            &copy; 2023 Sanayi. All rights reserved.
+            &copy; 2024 Abdelrahman. All rights reserved.
           </p>
           <div className="flex justify-center space-x-4">
             <a
