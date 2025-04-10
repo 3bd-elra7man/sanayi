@@ -94,7 +94,7 @@ export default function Register() {
   return (
     <div className="rg dvh-100">
       <h1 className="py-4 text-center fw-bold headLine">Register to Sanay'i</h1>
-      <h3 className="text-center text-gray-400">You Can Sign up with fake credentials to explore the website 👋</h3>
+      <h5 className="mb-3 text-center text-gray-400">You Can Sign up with fake credentials to explore the website 👋</h5>
       <div className="container">
         <div className="p-4 mx-auto p-md-5 regForm rounded-4">
           {errorslist?.map((err, index) => (
