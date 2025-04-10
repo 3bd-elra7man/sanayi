@@ -13,13 +13,6 @@ export const getProfile = async (req, res) => {
         .status(404)
         .json({ success: false, message: "User not found" });
     }
-
-    if (!user.isVerified) {
-      return res
-        .status(403)
-        .json({ success: false, message: "User not verified" });
-    }
-
     res.status(200).json({ success: true, user });
   } catch (error) {
     console.error("Error in getProfile:", error);
@@ -50,12 +43,6 @@ export const updateProfile = async (req, res) => {
       return res
         .status(404)
         .json({ success: false, message: "User not found" });
-    }
-
-    if (!user.isVerified) {
-      return res
-        .status(403)
-        .json({ success: false, message: "User not verified" });
     }
 
     if (
