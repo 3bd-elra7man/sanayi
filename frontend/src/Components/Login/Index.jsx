@@ -62,10 +62,9 @@ export default function Login() {
             </div>
           </form>
           <div className="mt-4 text-center card-footer">
-            <p className="text-white">
-              <Link to={"/forgotpassword"} className="text-white fw-bold">
-                Forgot Password?
-              </Link>
+          <p className="text-white">
+              You don't have an account?{" "}
+              <Link to={"/register"} className="fw-bold headLine">Register</Link>
             </p>
           </div>
         </div>
